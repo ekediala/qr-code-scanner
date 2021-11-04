@@ -31,9 +31,11 @@ export default function Home() {
 
     if (result) {
       return (
-        <a target='_blank' rel='noopener noreferrer' href={result}>
-          {result}
-        </a>
+        <div className={styles.resultBox}>
+          <a target='_blank' rel='noopener noreferrer' href={result}>
+            {result}
+          </a>
+        </div>
       );
     }
 
@@ -128,7 +130,7 @@ export default function Home() {
         <div className={styles.container}>
           <div>
             <QrReader
-              delay={300}
+              delay={2000}
               onError={handleError}
               onScan={handleScan}
               className={styles.scanner}
